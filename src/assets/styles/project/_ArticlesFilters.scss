@@ -1,0 +1,103 @@
+.ArticlesFilters {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  &__box {
+    margin-right: 10px;
+    max-width: 166px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid $color-grey-light-4;
+    @include mq(xs) {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 5px;
+    }
+
+    &--second {
+      @include mq(xs) {
+        margin: 5px 0 0;
+        width: 100%;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.8em;
+      right: 0.8em;
+      width: 0;
+      height: 0;
+      padding: 0;
+      content: '';
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $color-grey-light-4;
+      pointer-events: none;
+    }
+
+    select {
+      padding: 8px 38px 8px 8px;
+      width: 100%;
+      padding-right: 10px;
+      cursor: pointer;
+      text-indent: 0.01px;
+      text-overflow: ellipsis;
+      border: none;
+      background: $color-white;
+      background-image: none;
+      box-shadow: none;
+      appearance: none;
+
+      &::-ms-expand {
+        letter-spacing: 0.1em;
+        color: $color-main;
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    color: $color-white;
+    height: 100%;
+    padding: 0 0 0 10px;
+    width: 220px;
+    border: none;
+    border-bottom: $line;
+    background: transparent;
+    @include mq(xs) {
+      width: 80%;
+    }
+    &:focus {
+      outline: none;
+      background: $color-white;
+    }
+
+    &::placeholder {
+      color: $color-grey-dark-1;
+    }
+  }
+
+  &__searchIcon {
+    border-radius: 4px;
+    color: $color-main;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.8rem;
+    width: 34px;
+    height: 32px;
+    background: $color-white;
+    border: none;
+    transition: all .2s ease;
+
+    &:hover,
+    &:focus {
+      color: $color-green;
+    }
+  }
+}

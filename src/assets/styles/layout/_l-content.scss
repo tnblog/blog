@@ -1,0 +1,47 @@
+.l-content {
+  &__inner {
+    position: relative;
+    max-width: $width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    &--single {
+      max-width: 1065px;
+    }
+
+    &--page {
+      max-width: 680px;
+    }
+  }
+
+  &__wrap {
+    background: $color-white;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &--left {
+      padding: 24px;
+      flex-grow: 1;
+      width: 74%;
+      @include mq(md) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    &--right {
+      text-align: left;
+      // max-width: 280px;
+      width: 26%;
+      padding: 16px 24px 24px 0px;
+      align-items: flex-start;
+      @include mq(md) {
+        margin: 60px 0 0;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.c-button {
+  cursor: pointer;
+  display: block;
+  color: $color-white;
+  background: $color-bg;
+  width: 100%;
+  letter-spacing: 0.12em;
+  justify-content: center;
+  transition: opacity 0.2s linear;
+  border: none;
+
+  a {
+    color: $color-white;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--small {
+    max-width: 200px;
+    margin: 24px 0 0;
+    padding: 14px;
+  }
+
+  &--large {
+    max-width: 240px;
+    margin: 40px auto 0;
+    padding: 14px;
+
+    @include mq(md) {
+      max-width: 200px;
+      padding: 12px;
+    }
+
+    @include mq(sm) {
+      margin-top: 24px;
+    }
+  }
+  &--full {
+    height: 100%;
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 20px 14px;
+  }
+}

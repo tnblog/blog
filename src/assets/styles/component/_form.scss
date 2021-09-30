@@ -1,0 +1,36 @@
+.form {
+  padding: 40px 20px;
+  position: relative;
+  // margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    width: 100%;
+    font-size: 1.2rem;
+    // width: 96%;
+    padding: 1rem 2rem;
+    background: $color-grey-light-3;
+    border: none;
+    border-radius: 100px;
+    transition: width 200ms ease-out;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
+  }
+}
+
+
+@include mq-target(md) {
+  .form {
+    margin: 0;
+    order: 0;
+    flex: 0 0 40%;
+    &__input {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.introduction {
+  background: $color-bg;
+  &__inner {
+    position: relative;
+    max-width: 680px;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+  }
+
+  &__txt {
+    color: $color-white;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin: 40px 0 0;
+  }
+}

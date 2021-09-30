@@ -1,0 +1,9 @@
+.l-section {
+  padding: 80px 0;
+
+  &__wrap {
+    max-width: $width;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
