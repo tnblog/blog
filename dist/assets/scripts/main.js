@@ -25,7 +25,6 @@ function PageTopAnime() {
     $('#page-top').removeClass('DownMove');
     $('#page-top').addClass('UpMove');
   } else {
-    //それ以外は
     if ($('#page-top').hasClass('UpMove')) {
       $('#page-top').removeClass('UpMove');
       $('#page-top').addClass('DownMove');

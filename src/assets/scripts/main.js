@@ -26,7 +26,7 @@ function PageTopAnime() {
   if (scroll >= 200){
     $('#page-top').removeClass('DownMove');
     $('#page-top').addClass('UpMove');
-  }else{//それ以外は
+  }else{
     if($('#page-top').hasClass('UpMove')){
       $('#page-top').removeClass('UpMove');
       $('#page-top').addClass('DownMove');

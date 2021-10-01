@@ -8,8 +8,8 @@
 @import "./foundation/animate";
 
 // - pulugin
-@import "./foundation/pulugin/toc";
-@import "./foundation/pulugin/prism";
+@import "./foundation/plugin/toc";
+@import "./foundation/plugin/prism";
 
 //  --------------------
 //  layout
@@ -37,6 +37,7 @@
 @import "./component/pageTopScroll";
 @import "./component/loader";
 @import "./component/pager";
+@import "./component/filter";
 
 //  --------------------
 //  utility
@@ -46,11 +47,11 @@
 //  --------------------
 //  project
 //  --------------------
-@import "./project/ArticlesFilters";
 @import "./project/archive";
 @import "./project/single";
 @import "./project/contact";
 @import "./project/page";
+@import "./project/privacy";
 
 // - sidebar
 @import "./project/sidebar/sideArticles";

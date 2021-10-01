@@ -41,10 +41,13 @@ add_action('init', function() {
  */
 add_theme_support('menus');
 
+/**
+ * 抜粋文字数制限
+ */
 
 function twpp_change_excerpt_length($length)
 {
-    return 40;
+    return 120;
 }
 
 add_filter('excerpt_length', 'twpp_change_excerpt_length', 999);

@@ -5,7 +5,7 @@
 
   &__background {
     position: fixed;
-    top: 61px;
+    top: 0;
     left: 0;
     z-index: 20;
     width: 100%;
@@ -17,49 +17,13 @@
     transition:  opacity 0.25s ease;
   }
 
-  &__menu {
-    background: $color-white;
-    position: fixed;
-    top: 61px;
-    right: 0;
-    z-index: 30;
-    height: calc(100vh - 61px);
-    max-width: 400px;
-    width: 100%;
-    transform: translateX(100vw);
-    transition: .8s ease;
-    @include mq(sm) {
-      width: 80%;
-    }
-  }
-
-  &__list {
-    padding: 0;
-    list-style: none;
-  }
-
-  &__item {
-    background: $color-grey-light-1;
-    border-bottom: 1px solid #E8E8E8;
-    a {
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: $color-grey-dark-1;
-      text-transform: uppercase;
-      text-align: left;
-      display: block;
-      padding: 20px 60px;
-      transition: opacity .3s ease .0s;
-    }
-  }
-
-  &__btn {
+  &__button {
     user-select: none;
     position: relative;
     z-index: 100;
     display: flex;
     align-items: center;
-    width: 40px;
+    width: 38px;
     height: 30px;
     cursor: pointer;
   }
@@ -70,9 +34,9 @@
     &,
     &::before,
     &::after {
-      width: 40px;
+      width: 38px;
       height: 2px;
-      background: $color-main;
+      background: $color-white;
       display: inline-block;
     }
 
@@ -99,25 +63,27 @@
       visibility: visible;
       pointer-events: auto;
     }
-    .drawer__menu {
+    .l-header__spMenu {
       transition: transform .4s ease-out;
       transform: translateX(0vw);
     }
   }
 
   &__trigger:checked + {
-    .drawer__btn .drawer__icon {
+    .drawer__button .drawer__icon {
       background: transparent;
 
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
-        background: $color-main;
-      }
+      &::before,
       &::after {
         top: 0;
+        background: $color-main;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
         transform: rotate(-45deg);
-        background: $color-main;;
       }
     }
   }

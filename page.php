@@ -20,7 +20,7 @@
   <main>
     <section class="l-section introduction">
       <div class="introduction__inner">
-      <?php get_template_part('includes/breadcrumb'); ?>
+        <?php get_template_part('includes/breadcrumb'); ?>
         <h1 class="heading--page">
           <?php the_title(); ?>
           <!-- <span><?php echo strtoupper($post->post_name); ?></span> -->
@@ -38,15 +38,12 @@
 
         <section class="l-section page">
           <div class="page__inner">
-          <h2 class="heading--section">
-            <?php the_title(); ?>
-          </h2>
+            <h2 class="heading--section">
+              <?php the_title(); ?>
+            </h2>
             <?php the_content(); ?>
-            <a href="/" class="c-button c-button--full">ホームに戻る</a>
           </div>
         </section>
-
-
       </div><!-- l-content__inner -->
     </div><!-- l-content -->
   </main>
